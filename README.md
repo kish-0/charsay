@@ -10,7 +10,7 @@
 
 ## Installation
 
-To install this package, you can clone the repository and run it locally. Once published, it will be available on PyPI.
+To install this package, you can clone the repository and run it locally. Or it can be installed using pip from PyPI.
 
 ## Usage
 
