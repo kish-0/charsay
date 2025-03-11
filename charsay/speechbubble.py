@@ -1,9 +1,9 @@
 import textwrap
-# Declaring global maximum horizontal char accomodation of speech box
-global maxlength
+
+global maxlength                                              # Declaring global maximum horizontal char accomodation of speech box
 maxlength = 60
 
-def wrapup(t):
+def wrapup(t):                                                # Wraps up text to be no more than 'maxlength' characters horzontally by sending them to \n
     wrapper = textwrap.TextWrapper(width=maxlength)
     wl = wrapper.wrap(text=t)
     return wl
@@ -11,29 +11,35 @@ def wrapup(t):
 def say(ls):
     big = None
     length = len(ls)
-    if length > 60:                          # Check if wrapping is actually needed
+    frontpadding = " "                                        # Padding preceding the bubble
+
+    if length > 60:                                           # Check if wrapping is actually needed
         ls = wrapup(ls)
         maxlength = 60
         big = True
     else:
-        maxlength = length
+        if length > 20:
+            maxlength = length
+        else:
+            maxlength = 20
+            ls += " " * (20 - length)                         # If string len < 20, we succeed the string with " " so as to make the bubble uniform and connected to cartoon character
 
-    print("  " + "_" * maxlength)            # Header top line
-    print(" " + "0" + " " * maxlength + "0") # Header top line - corners
+    print(frontpadding + " " + "_" * maxlength)               # Header top line
+    print(frontpadding + "0" + " " * maxlength + "0")         # Header top line - corners
 
-    if big:                                  # If wrapping is required, printed accordingly
+    if big:                                                   # If wrapping is required, printed accordingly
         for x in ls:
             if len(x) == maxlength:
-                print(" " + "|" + x + "|")
+                print(frontpadding + "|" + x + "|")
             else:
                 while len(x) < maxlength:
                     x = x + " "
-                print(" " + "|" + x + "|")
+                print(frontpadding + "|" + x + "|")
     else:
-        print(" " + "|" + ls + "|")          # Normal printing for strings with < 60 chars
+        print(frontpadding + "|" + ls + "|")                   # Normal printing for strings with < 60 chars
     
 
-    print(" " + "0" + "_" * maxlength + "0")  # Last closing line
+    print(frontpadding + "0" + "_" * maxlength + "0", end="")  # Last closing line
 
 def main():
     s = input("Input: ")
