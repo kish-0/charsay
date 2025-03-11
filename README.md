@@ -12,18 +12,20 @@
 
 To install this package, you can clone the repository and run it locally. Or it can be installed using pip from PyPI.
 
+
 ## Usage
 
 Here's a basic example of how to use the package:
 
-from charsay import bart, homer, marge, lisa, maggie
+#### Example usage:
 
-Example usage
-bart("Eat my shorts!")
-homer("D'oh!")
-marge("Mmm... donuts!")
-lisa("Saxophone solo!")
-maggie("Ga ga ga!")
+`from charsay import bart, homer, marge, lisa, maggie` 
+
+`bart("Eat my shorts!")`
+`homer("D'oh!")`
+`marge("Mmm... donuts!")`
+`lisa("Saxophone solo!")`
+`maggie("Ga ga ga!")` 
 
 
 ## Available Functions
