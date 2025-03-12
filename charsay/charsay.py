@@ -1,37 +1,28 @@
-
-def makestring(inpt):
-    s=""
-    for j in inpt:
-        if inpt.index(j) < 100:
-            s+=j
-        else:
-            break
-
-    s = s.split()
-    s = " ".join(s)
-    return s
+from .speechbubble import say
 
 def bart(inp):
-    s = makestring(inp)
-    print(rf"""             
-    |\/\/\/|   
-    |      |   
-    |      |     |{s}|
-    | (o)(o)      /
-    C      _)    /
+    s = say(inp)
+    print(rf"""   
+                 |          
+    |\/\/\/|     |
+    |      |     | 
+    |      |     |
+    | (o)(o)     |
+    C      _)    |
     | ,___| ____/
     |   /    
    /____\    
   /      \ """)
     
 def homer(inp):
-    s = makestring(inp)
-    print(rf"""
-     __&__      
-    /     \     
-    |       |    |{s}|
-    |  (o)(o)    /
-    C   .---_)  / 
+    s = say(inp)
+    print(rf""" 
+                |
+     __&__      |
+    /     \     |
+    |       |   |  
+    |  (o)(o)   |
+    C   .---_)  | 
     | |.___| __/    
     |  \__/     
    /_____\     
@@ -39,59 +30,50 @@ def homer(inp):
  /         \ """)
 
 def marge(inp):
-    s = makestring(inp)
+    s = say(inp)
     print(rf"""
-            
-       oooo
-     ooooooooo
-    oooooooooooo
-    ooooooooooooo
-     oooooooooooooo
-     oooooooooooooo
-     ooooooOOOOOOOO
-      oooooooooooooo
-      oooooooooooooo
-      oooooooooooooo
-      oooooooooooooo
-       oooooooooooooo
-       oooooooooooooo
-       ooooo \_| \_|o
-       oooo \/  \/  \
-       oooo (o   )o  )
-       O/c   \__/ --.     |{s}|  
-       O\_   ,     -'     /
-        O|  '\_______)   /
-         |       _)  ___/
-         oooooooo
-        /        \ """)
+ |         
+ |              (####)
+ |            (#######)
+ |          (#########)
+ |         (#########)
+ |        (#########)
+ |       (#########)
+ |      (#########)
+ |     (#########)
+ |    (#########) 
+ |     (o)(o)(##)
+  \  ,_C     (##)
+   \ /___,   (##)    
+      \     (#) 
+       |    |   
+       OOOOOO  
+      /      \
+""")
     
 def lisa(inp):
-    s = makestring(inp)
+    s = say(inp)
     print(rf"""
-          
-          /\  /\
-      ___/  \/  \___
-     |             /
-     |            /_
-     /     \_| \_| /
-    /     \/  \/  \/
-    \     (o   )o  )     |{s}|
-     \ /c  \__/ --.      /
-     | \_  ,     -'     /
-     |_ | '\_______) __/
-       ||      _)
-        |     |
-        ooooooo
-       /       \ """)
+ |          
+ |   /\ /\  /\      
+ |   | V  \/  \---. 
+ |    \_        /   
+ |     (o)(o)  <__. 
+ |    _C         /  
+  \_ /____,   )  \  
+       \     /----' 
+        ooooo       
+       /     \
+    """)
     
 def maggie(inp):
-    s = makestring(inp)
+    s = say(inp)
     print(rf"""
        /\
- .----/  \----.
-  \          /
+ .----/  \----.    ________________
+  \          /    0                0
 .--\ (o)(o) /__.  |*slurp* ga ga ga|
- \     ()     /   /
+ \     ()     /   0________________0 
   >   (C_)   < __/
  /___\____/___\
     /|    |\
