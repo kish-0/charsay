@@ -5,7 +5,7 @@
 ## Features
 
 - **Simpsons Characters**: Supports Bart, Homer, Marge, Lisa, and Maggie.
-- **Customizable Text**: Add your own text (up to 100 characters) for the characters to say.
+- **Customizable Text**: Add your own text for the characters to say.
 - **ASCII Art**: Each character is represented in ASCII art form, inspired by existing Simpsons designs.
 
 ## Installation
@@ -36,11 +36,6 @@ Here's a basic example of how to use the package:
 - **lisa(inp)**: Prints Lisa Simpson saying the given text.
 - **maggie(inp)**: Prints Maggie Simpson saying the given text.
 
-## Future Plans
-
-- **More Characters**: Additional characters from other franchises will be added.
-- **Text Length Limitation**: The text length limit may be increased in future updates.
-
 ## Contributing
 
 Contributions are welcome! Feel free to add more characters or improve existing ones.
@@ -51,7 +46,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
-- The Simpsons characters are copyrighted by Disney. This project uses ASCII art designs inspired by these characters for   non-commercial purposes.
+- The Simpsons characters are copyrighted by Disney. This project uses ASCII art designs inspired by these characters for non-commercial purposes.
 - ASCII art designs are not original and are based on existing Simpsons designs.
 
 ## Legal Note
