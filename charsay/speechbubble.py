@@ -1,21 +1,19 @@
 import textwrap
 
-global maxlength                                              # Declaring global maximum horizontal char accomodation of speech box
-maxlength = 60
-
 def wrapup(t):                                                # Wraps up text to be no more than 'maxlength' characters horzontally by sending them to \n
     wrapper = textwrap.TextWrapper(width=maxlength)
     wl = wrapper.wrap(text=t)
     return wl
 
-def say(ls):
+def say(ls, maxl):
+    global maxlength                                              # Declaring global maximum horizontal char accomodation of speech box
+    maxlength = maxl
     big = None
     length = len(ls)
     frontpadding = " "                                        # Padding preceding the bubble
 
     if length > 60:                                           # Check if wrapping is actually needed
         ls = wrapup(ls)
-        maxlength = 60
         big = True
     else:
         if length > 20:
