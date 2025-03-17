@@ -1,2 +1,2 @@
 #init
-from .charsay import homer, marge, bart, lisa, maggie
+from .charsay import Charactersay
