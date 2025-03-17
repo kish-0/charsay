@@ -1,12 +1,13 @@
 # Charsay
 
-**Character Say** - A simple Python package that generates ASCII art of characters saying a given string. Currently, it supports Simpsons characters, with more to be added in the future.
+**Character Say** - A simple Python package that generates ASCII art of characters saying a given string. Currently, it supports Simpsons characters.
 
 ## Features
 
 - **Simpsons Characters**: Supports Bart, Homer, Marge, Lisa, and Maggie.
 - **Customizable Text**: Add your own text for the characters to say.
 - **ASCII Art**: Each character is represented in ASCII art form, inspired by existing Simpsons designs.
+- **I'm Feeling Lucky**: Initialize `character = Charactersay()` and call the `character.imfeelinglucky()` to get fortune cookie messages.
 
 ## Installation
 
@@ -16,25 +17,43 @@ To install this package, you can clone the repository and run it locally. Or it 
 ## Usage
 
 Here's a basic example of how to use the package:
-
+```python.
+from charsay import Charactersay   #import Charactersay() class
+```
+'horizontal_length' can be any int or float (raises ValueError if otherwise)
+'horizontal_length' is an optional parameter (default=60) with a minimum possible value 15 (raises ValueError if otherwise)
+```python.
+from charsay import Charactersay   #import Charactersay() class
+character = Charactersay(horizontal_length=x) # initializing object 
+```
+'object.string' is the string you want characters to say
+```python.
+character.string = "Hello, world!"
+```
 #### Example usage:
 
-`from charsay import bart, homer, marge, lisa, maggie` 
+```python.
+from charsay import Charactersay
+character = Charactersay(horizontal_length=50)
+character.string = 'English? Who needs that? I’m never going to England.'
 
-`bart("Eat my shorts!")`
-`homer("D'oh!")`
-`marge("Mmm... donuts!")`
-`lisa("Saxophone solo!")`
-`maggie("Ga ga ga!")` 
-
+character.homer()
+```
 
 ## Available Functions
+These methods take no arguments. They only need to be called, and will print the 'object.string' assigned earlier ('Hello, world!' if no string was assigned)
+```python.
+from charsay import Charactersay
+character = Charactersay()
 
-- **bart(inp)**: Prints Bart Simpson saying the given text.
-- **homer(inp)**: Prints Homer Simpson saying the given text.
-- **marge(inp)**: Prints Marge Simpson saying the given text.
-- **lisa(inp)**: Prints Lisa Simpson saying the given text.
-- **maggie(inp)**: Prints Maggie Simpson saying the given text.
+character.homer() 
+character.marge()
+character.bart()
+character.lisa()
+character.maggie()
+character.imfeelinglucky() 
+    #-->Generates a random character saying a random fortune-quote (ignores 'obj'.string)
+```
 
 ## Contributing
 
