@@ -31,7 +31,7 @@ pip install charsay
 ```
 ### 3️⃣ Verify Installation
 ```.bash
-python -c "import charsay; print(charsay.__version__)"
+pip list
 ```
 
 
