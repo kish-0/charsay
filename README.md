@@ -42,7 +42,7 @@ Here's a basic example of how to use the package:
 from charsay import Charactersay   #import Charactersay() class
 ```
 'horizontal_length' can be any int or float (raises ValueError if otherwise)
-'horizontal_length' is an optional parameter (default=60) with a minimum possible value 15 (raises ValueError if otherwise)
+'horizontal_length' is an optional parameter (default=60) with a minimum possible value 15 (only for strings > 60char long..for smaller strings -> generated automatically)
 ```python.
 from charsay import Charactersay   #import Charactersay() class
 character = Charactersay(horizontal_length=x) # initializing object 
