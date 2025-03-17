@@ -31,7 +31,6 @@ class Charactersay:
                 self.lisa()
             case 'maggie':
                 self.maggie()
-                
         self.internalcall = False
 
     def bart(self):
